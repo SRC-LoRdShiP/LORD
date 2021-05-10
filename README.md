@@ -9,7 +9,7 @@
 
 # <p align="center"> كود تنصيب السورس ⌯︙
 
- # <p align="center" style="color:#cb3349" > ``git clone https://github.com/SRC-LoRdShiP/LORDA ;cd LORDA;chmod +x install;./install``
+ # <p align="center" style="color:#cb3349" > ``git clone https://github.com/SRC-LoRdShiP/LORD ;cd LORD;chmod +x install;./install``
 
 # <p align="center"> بعد انتهاء عمليه تثبيت السورس ⌯︙
 
