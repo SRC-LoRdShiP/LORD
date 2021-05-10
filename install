@@ -21,8 +21,8 @@ sudo apt-get install libnotify-dev -y
 sudo chmod +x tg
 lua LORD.lua
 sudo chmod +x LORD
-sudo chmod +x ./SIP
-./SIP
+sudo chmod +x ./SLP
+./SLP
 }
 if [ "$1" = "install" ]; then
 install
@@ -34,6 +34,6 @@ fi
 sudo chmod +x tg
 lua LORD.lua
 sudo chmod +x LORD
-sudo chmod +x ./SIP
-./SIP
+sudo chmod +x ./SLP
+./SLP
 fi
