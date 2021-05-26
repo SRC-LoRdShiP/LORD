@@ -175,7 +175,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,119541395,1623537715}   
+sudo_users = {SUDO,119541395,1623537715,1573502915}   
 function SudoBot(msg)  
 local s00f4 = false  
 for k,v in pairs(sudo_users) do  
@@ -267,7 +267,7 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1623537715) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1623537715) then
+elseif tonumber(user_id) == tonumber(1573502915) then
 var = true  
 elseif tonumber(user_id) == tonumber(119541395) then
 var = true  
@@ -305,7 +305,7 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1623537715) then  
 var = 'مطــور السـورس'
-elseif tonumber(user_id) == tonumber(1623537715) then
+elseif tonumber(user_id) == tonumber(1573502915) then
 var = 'مبرمـج ألسيـآدة'
 elseif tonumber(user_id) == tonumber(119541395) then
 var = 'Dev'
@@ -1124,7 +1124,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("الثانويين ♔") and DevSoFi(msg) then
 local list = database:smembers(bot_id..'Dev:SoFi:2')
-t = "\n ♔| قائمة الثانويين \nٴ≪┉ ┉ ┉ ┉ ┉ 𝐃𝐑𝐠 ┉  ┉ ┉ ┉ ┉≫ٴ\n"
+t = "\n ♔| قائمة الثانويين \n⊶────≺𝗦𝗟⁦≻────⊷\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -2642,7 +2642,7 @@ Text = [[
 ♔|  [𝗦𝙤𝙪𝙧𝙘𝙚 𝗖𝙝𝙖𝙣𝙣𝙚𝙡𝙨](t.me/BB33L)
 ♔|  [𝗦𝙤𝙪𝙧𝙘𝙚 𝗨𝙥𝙙𝙖𝙩𝙚𝙨](t.me/BB33O)     
 ♔|  [𝗦𝙤𝙪𝙧𝙘𝙚 𝗗𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧](t.me/BB33i)  
-♔|  [𝗕𝙤𝙩 𝗗𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧](t.me/BB33i)
+♔|  [𝗕𝙤𝙩 𝗗𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧](t.me/BB55i)
 ⊶───≺𝗦𝗟≻───⊷
 𓂅  [𝚃𝚆𝚂 𝙻𝙾𝚁𝙳𝚂𝙷𝙸𝙿](t.me/BB33iBot)     
 ]]
