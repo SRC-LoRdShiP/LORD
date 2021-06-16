@@ -10944,7 +10944,7 @@ keyboard.inline_keyboard = {
 {text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33O"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
