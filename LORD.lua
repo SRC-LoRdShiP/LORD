@@ -462,6 +462,9 @@ end
 function send_inline_key(chat_id,text,keyboard,inline,reply_id) 
 local response = {} response.keyboard = keyboard response.inline_keyboard = inline response.resize_keyboard = true response.one_time_keyboard = false response.selective = false  local send_api = "https://api.telegram.org/bot"..token.."/sendMessage?chat_id="..chat_id.."&text="..URL.escape(text).."&parse_mode=Markdown&disable_web_page_preview=true&reply_markup="..URL.escape(JSON.encode(response)) if reply_id then send_api = send_api.."&reply_to_message_id="..reply_id end return s_api(send_api) 
 end
+function GetBio(chat_id)
+local Check = https.request('https://api.telegram.org/bot'..token..'/getChat?chat_id='..chat_id) local GetInfo = JSON.decode(Check) if GetInfo.ok == true then if GetInfo.result.bio then SOFI = GetInfo.result.bio else SOFI = "لا يوجد" end end return SOFI
+end
 local function GetInputFile(file)  
 local file = file or ""   if file:match('/') then  infile = {ID= "InputFileLocal", path_  = file}  elseif file:match('^%d+$') then  infile = {ID= "InputFileId", id_ = file}  else  infile = {ID= "InputFilePersistentId", persistent_id_ = file}  end return infile 
 end
@@ -2633,21 +2636,33 @@ end
 end
 end,nil)   
 end
------------
+--------------------------------------------------------------------------------------------------------------
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then
-Text = [[
-𓆩‏𝗪𝙚𝙡𝙘𝙤𝙢𝙚 𝗧𝙤 𝗦𝙤𝙪𝙧𝙘𝙚𓆪
-♔ 𝗦𝙤𝙪𝙧𝙘𝙚 𝗟𝙤𝙧𝙙𝙨𝙝𝙞𝙥
+local text =  [[
+𓆩‏𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙏𝙤 𝙎𝙤𝙪𝙧𝙘𝙚𓆪
+♔┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥➧الســيـاده
 ᷂⊶───≺𝗦𝗟≻───⊷
-♔┇  [𝗦𝙤𝙪𝙧𝙘𝙚 𝗖𝙝𝙖𝙣𝙣𝙚𝙡𝙨](t.me/BB33L)
-♔┇  [𝗦𝙤𝙪𝙧𝙘𝙚 𝗨𝙥𝙙𝙖𝙩𝙚𝙨](t.me/BB33O)     
-♔┇  [𝗦𝙤𝙪𝙧𝙘𝙚 𝗗𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧](t.me/BB33i)  
-♔┇  [𝗕𝙤𝙩 𝗗𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧](t.me/BB55i)
-⊶───≺𝗦𝗟≻───⊷
-𓂅  [𝚃𝚆𝚂 𝙻𝙾𝚁𝙳𝚂𝙷𝙸𝙿](t.me/BB33iBot)     
-]]
-send(msg.chat_id_, msg.id_,Text)
-return false
+]] 
+local inline = {
+{{text = '♔┇𝙎𝙤𝙪𝙧𝙘𝙚 𝘾𝙝𝙖𝙣𝙣𝙚𝙡', url="t.me/BB33L"},},
+{{text = '♔┇𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙐𝙥𝙙𝙖𝙩𝙚𝙨', url="t.me/BB33O"},},
+{{text = '♔┇𝙎𝙤𝙪𝙧𝙘𝙚 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧', url="t.me/BB33i"},},
+{{text = '♔┇𝗕𝙤𝙩 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧', url="t.me/BB33i"},},
+{{text = '𓂅  𝚃𝚆𝚂 𝙻𝙾𝚁𝙳𝚂𝙷𝙸𝙿', url="t.me/BB33iBot"},},}
+send_inline_key(msg.chat_id_,text,nil,inline) 
+return false 
+end
+--------------------------------------------------------------------------------------------------------------
+if text == "منو مطور السورس" or text == "منو المطور" or text == "مطور السورس" or text == "مطور السيادة" then  
+local s00f4 = GetBio(tonumber(1623537715),msg.chat_id_)
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '♔┇المطــور السورس ⇤ ( 𖥻¹ܔᯓ𝐴ٍِꫝ𝘣𝘳𝑖 )', url="t.me/BB33i"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BB33i&caption=' .. URL.escape(s00f4).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
@@ -10916,32 +10931,32 @@ local Text =[[
 *♔ | اهلا انت في اوامر البوت الرئيسية *
 *♔ | اختر في الاسفل الرقم التابع للأمر *
 *⊶────≺𝗦𝗟⁦≻────⊷*
-*❶◂ اوامر الحمايه .*
-*❷◂ اوامر تعطيل ~ تفعيل .*
-*❸◂ اوامر ضع ~ اضف  .*
-*❹◂ اوامر مسح ~ حذف .*
-*❺◂ اوامر تنزيل+رفع+التغير .*
-*❻◂ اوامر الكروب .*
-*❼◂ اوامر التحشيش .*
-*❽◂ اوامر مطور البوت .*
-*❾◂ اوامر مطور الاساسي .*
-*❿◂ اوامر الاعضاء .*
+*⓵◂ اوامر الحمايه .*
+*⓶◂ اوامر تعطيل ~ تفعيل .*
+*⓷◂ اوامر ضع ~ اضف  .*
+*⓸◂ اوامر مسح ~ حذف .*
+*⓹◂ اوامر تنزيل+رفع+التغير .*
+*⓺◂ اوامر الكروب .*
+*⓻◂ اوامر التحشيش .*
+*⓼◂ اوامر مطور البوت .*
+*⓽◂ اوامر مطور الاساسي .*
+*⓾◂ اوامر الاعضاء .*
 *⊶────≺𝗦𝗟⁦≻────⊷*
 [💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹](t.me/BB33L)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33O"},
@@ -11220,16 +11235,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11289,16 +11304,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11340,16 +11355,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11400,16 +11415,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11465,16 +11480,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11549,16 +11564,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11623,16 +11638,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11667,16 +11682,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11764,16 +11779,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11821,16 +11836,16 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
@@ -11851,32 +11866,32 @@ local Teext =[[
 *♔ | اهلا انت في اوامر البوت الرئيسية *
 *♔ | اختر في الاسفل الرقم التابع للأمر *
 *⊶────≺𝗦𝗟⁦≻────⊷*
-*❶◂ اوامر الحمايه .*
-*❷◂ اوامر تعطيل ~ تفعيل .*
-*❸◂ اوامر ضع ~ اضف  .*
-*❹◂ اوامر مسح ~ حذف .*
-*❺◂ اوامر تنزيل+رفع+التغير .*
-*❻◂ اوامر الكروب .*
-*❼◂ اوامر التحشيش .*
-*❽◂ اوامر مطور البوت .*
-*❾◂ اوامر مطور الاساسي .*
-*❿◂ اوامر الاعضاء .*
+*⓵◂ اوامر الحمايه .*
+*⓶◂ اوامر تعطيل ~ تفعيل .*
+*⓷◂ اوامر ضع ~ اضف  .*
+*⓸◂ اوامر مسح ~ حذف .*
+*⓹◂ اوامر تنزيل+رفع+التغير .*
+*⓺◂ اوامر الكروب .*
+*⓻◂ اوامر التحشيش .*
+*⓼◂ اوامر مطور البوت .*
+*⓽◂ اوامر مطور الاساسي .*
+*⓾◂ اوامر الاعضاء .*
 *⊶────≺𝗦𝗟⁦≻────⊷*
 [💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹](t.me/BB33L)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '❶', callback_data="/help1"},{text = '❷', callback_data="/help2"},{text = '❸', callback_data="/help3"},
+{text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},{text = '⓷', callback_data="/help3"},
 },
 {
-{text = '❹', callback_data="/help4"},{text = '❺', callback_data="/help5"},
+{text = '⓸', callback_data="/help4"},{text = '⓹', callback_data="/help5"},
 },
 {
-{text = '❻', callback_data="/help6"},{text = '❼', callback_data="/help7"},{text = '❽', callback_data="/help8"},
+{text = '⓺', callback_data="/help6"},{text = '⓻', callback_data="/help7"},{text = '⓼', callback_data="/help8"},
 },
 {
-{text = '❾', callback_data="/help9"},{text = '❿', callback_data="/help10"},
+{text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
 {text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
