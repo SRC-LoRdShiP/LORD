@@ -149,7 +149,7 @@ print([[
 > CH › @S0DRG
 > CH › @BB33L
 ~> DEVELOPER › @S00F4
-~> DEVELOPER › @BB33i
+~> DEVELOPER › @bb33i
 ]])
 sudos = dofile("./Info.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -2646,23 +2646,23 @@ local text =  [[
 local inline = {
 {{text = '♔┇𝙎𝙤𝙪𝙧𝙘𝙚 𝘾𝙝𝙖𝙣𝙣𝙚𝙡', url="t.me/BB33L"},},
 {{text = '♔┇𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙐𝙥𝙙𝙖𝙩𝙚𝙨', url="t.me/BB33O"},},
-{{text = '♔┇𝙎𝙤𝙪𝙧𝙘𝙚 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧', url="t.me/BB33i"},},
+{{text = '♔┇𝙎𝙤𝙪𝙧𝙘𝙚 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧', url="t.me/bb33i"},},
 {{text = '♔┇𝗕𝙤𝙩 𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧', url="t.me/BB55i"},},
-{{text = '𓂅  𝚃𝚆𝚂 𝙻𝙾𝚁𝙳𝚂𝙷𝙸𝙿', url="t.me/BB33iBot"},},}
+{{text = '𓂅  𝚃𝚆𝚂 𝙻𝙾𝚁𝙳𝚂𝙷𝙸𝙿', url="t.me/bb33iBot"},},}
 send_inline_key(msg.chat_id_,text,nil,inline) 
 return false 
 end
 --------------------------------------------------------------------------------------------------------------
-if text == "منو مطور السورس" or text == "منو المطور" or text == "مطور السورس" or text == "مطور السيادة" then  
+if text == "منو مطور السورس" or text == "منو المطور" or text == "مطور السورس" or text == "مطور السيادة" or text == "مطور السياده" then  
 local s00f4 = GetBio(tonumber(1573502915),msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '♔┇المطــور السورس ⇤ ( 𖥻¹ܔᯓ𝐴ٍِꫝ𝘣𝘳𝑖 )', url="t.me/BB33i"},
+{text = '♔┇المطــور السورس ⇤ ( 𖥻¹ܔᯓ𝐴ٍِꫝ𝘣𝘳𝑖 )', url="t.me/bb33i"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/bb33i&caption=' .. URL.escape(s00f4).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/bb55i&caption=' .. URL.escape(s00f4).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
