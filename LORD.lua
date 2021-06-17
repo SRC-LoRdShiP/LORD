@@ -2654,7 +2654,7 @@ return false
 end
 --------------------------------------------------------------------------------------------------------------
 if text == "منو مطور السورس" or text == "منو المطور" or text == "مطور السورس" or text == "مطور السيادة" then  
-local s00f4 = GetBio(tonumber(1623537715),msg.chat_id_)
+local s00f4 = GetBio(tonumber(1573502915),msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -2662,7 +2662,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BB33i&caption=' .. URL.escape(s00f4).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/bb33i&caption=' .. URL.escape(s00f4).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'GroupBot' and ChekAdd(msg.chat_id_) == true then
