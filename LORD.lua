@@ -2654,7 +2654,7 @@ return false
 end
 --------------------------------------------------------------------------------------------------------------
 if text == "منو مطور السورس" or text == "منو المطور" or text == "مطور السورس" or text == "مطور السيادة" or text == "مطور السياده" then  
-local s00f4 = GetBio(tonumber(1573502915),msg.chat_id_)
+local s00f4 = GetBio(tonumber(1623537715),msg.chat_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -5183,7 +5183,7 @@ send(msg.chat_id_, msg.id_, ' ♔┇  تم مسح المنظفين')
 end
 if text == ("المنظفين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'S00F4:MN:TF'..msg.chat_id_)
-t = "\n ♔┇  قائمة المنظفين \n≪━━━━━━𝓓𝓡𝓖━━━━━━≫\n"
+t = "\n ♔┇  قائمة المنظفين \n⊶────≺𝗦𝗟⁦≻────⊷\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5199,7 +5199,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنظفين") or text == ("صيح المنظفين") then
 local list = database:smembers(bot_id..'S00F4:MN:TF'..msg.chat_id_)
-t = "\n ♔┇  وينكم تعالو يريدوكم بالكروب \n≪━━━━━━𝓓𝓡𝓖━━━━━━≫\n"
+t = "\n ♔┇  وينكم تعالو يريدوكم بالكروب \n⊶────≺𝗦𝗟⁦≻────⊷\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -11125,7 +11125,7 @@ if text == 'رابط الحذف' or text == 'رابط حذف' then
 t =[[
 رابط الحذف في جميع مواقع التواصل ♔ 
 فكر قبل لا تتسرع وتروح
-ٴ⊰━━━━━𝓓𝓡𝓖━━━━━⊱ٴ
+⊶────≺𝗦𝗟⁦≻────⊷
  ♔  رابط حذف  [Telegram](https://my.telegram.org/auth?to=delete) ܁
  ♔  رابط حذف [instagram](https://www.instagram.com/accounts/login/?next=/accounts/remove/request/permanent/) ܁
  ♔  رابط حذف [Facebook](https://www.facebook.com/help/deleteaccount) ܁
@@ -11250,7 +11250,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11319,7 +11319,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11370,7 +11370,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11430,7 +11430,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11495,7 +11495,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11579,7 +11579,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11653,7 +11653,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11697,7 +11697,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11794,7 +11794,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11851,7 +11851,7 @@ keyboard.inline_keyboard = {
 {text = 'رجوع الئ الاوامر', callback_data="/help"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11894,7 +11894,7 @@ keyboard.inline_keyboard = {
 {text = '⓽', callback_data="/help9"},{text = '⓾', callback_data="/help10"},
 },
 {
-{text = '💻┇𝙎𝙤𝙪𝙧𝙘𝙚 𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥ܔ𖥻¹', url="t.me/BB33L"},
+{text = '🗃┇𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥 𝙐𝙥𝙙𝙖𝙩𝙚𝙨ܔ𖥻¹', url="t.me/BB33L"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -11964,7 +11964,7 @@ end
 if text == "نسبه الحب" or text == "نسبه حب" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:lov'..msg.chat_id_) then
 database:set(bot_id..":"..msg.sender_user_id_..":lov_Bots"..msg.chat_id_,"sendlove")
-Text = 'ارسل اسمك واسم الشخص الثاني،  \n مثال عباس و ميس'
+Text = 'ارسل اسمك واسم الشخص الثاني،  \n مثال روميو  و جوليت'
 send(msg.chat_id_, msg.id_,Text) 
 end
 end
@@ -12006,7 +12006,7 @@ end
 if text == "نسبه الانوثه" or text == "نسبه انوثه" and msg.reply_to_message_id_ ~= 0 and Addictive(msg) then
 if not database:get(bot_id..'Cick:ano'..msg.chat_id_) then
 database:set(bot_id..":"..msg.sender_user_id_..":ano_Bots"..msg.chat_id_,"sendanoe")
-Text = 'ارسل اسم الشخص الذي تريد قياس نسبه انوثتها \n مثال ميس'
+Text = 'ارسل اسم الشخص الذي تريد قياس نسبه انوثتها \n مثال جوليت'
 send(msg.chat_id_, msg.id_,Text) 
 end
 end
