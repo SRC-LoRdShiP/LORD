@@ -175,7 +175,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,119541395,1623537715,1573502915,458442261,1782576192}   
+sudo_users = {SUDO,119541395,1623537715,1573502915,458442261,1782576192,1289573518}   
 function SudoBot(msg)  
 local s00f4 = false  
 for k,v in pairs(sudo_users) do  
@@ -273,6 +273,8 @@ elseif tonumber(user_id) == tonumber(458442261) then
 var = true  
 elseif tonumber(user_id) == tonumber(1782576192) then  
 var = true   
+elseif tonumber(user_id) == tonumber(1289573518) then
+var = true  
 elseif tonumber(user_id) == tonumber(119541395) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -312,9 +314,11 @@ var = 'مطــور السـورس'
 elseif tonumber(user_id) == tonumber(1573502915) then
 var = 'مبـرمج السـورس'
 elseif tonumber(user_id) == tonumber(458442261) then  
-var = 'مطــور ألسيآده'
+var = 'مطــور السـياده'
 elseif tonumber(user_id) == tonumber(1782576192) then  
-var = 'مبـرمج ألسيآده'
+var = 'مبـرمج السـياده'
+elseif tonumber(user_id) == tonumber(1289573518) then  
+var = '𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥'
 elseif tonumber(user_id) == tonumber(119541395) then
 var = 'Dev'
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -8356,7 +8360,7 @@ return false end
 end
 
 if text == 'المطور' or text == 'مطور' then
-local DevCh1 = database:get(bot_id.."text:ch:user")
+local DevCh1 = database:get(bot_id.."add:ch:username")
 local TEXT_SUDO = database:get(bot_id..'TEXT_SUDO')
 if DevCh1 then DevCh = '\n♔┇*𝘿𝙚𝙫 𝘾𝙃* ↬ ['..DevCh1..']' else DevCh = '' end
 if TEXT_SUDO then 
