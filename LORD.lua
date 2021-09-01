@@ -175,7 +175,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,119541395,1623537715,1573502915,458442261,1782576192,1289573518}   
+sudo_users = {SUDO,119541395,1623537715,1954724531,1782576192,1573502915}   
 function SudoBot(msg)  
 local s00f4 = false  
 for k,v in pairs(sudo_users) do  
@@ -269,11 +269,9 @@ if tonumber(user_id) == tonumber(1623537715) then
 var = true  
 elseif tonumber(user_id) == tonumber(1573502915) then
 var = true 
-elseif tonumber(user_id) == tonumber(458442261) then  
+elseif tonumber(user_id) == tonumber(1954724531) then
 var = true  
-elseif tonumber(user_id) == tonumber(1782576192) then  
-var = true   
-elseif tonumber(user_id) == tonumber(1289573518) then
+elseif tonumber(user_id) == tonumber(1782576192) then
 var = true  
 elseif tonumber(user_id) == tonumber(119541395) then
 var = true  
@@ -313,12 +311,10 @@ if tonumber(user_id) == tonumber(1623537715) then
 var = 'مطــور السـورس'
 elseif tonumber(user_id) == tonumber(1573502915) then
 var = 'مبـرمج السـورس'
-elseif tonumber(user_id) == tonumber(458442261) then  
-var = 'مطــور السـياده'
-elseif tonumber(user_id) == tonumber(1782576192) then  
-var = 'مبـرمج السـياده'
-elseif tonumber(user_id) == tonumber(1289573518) then  
-var = '𝙇𝙤𝙧𝙙𝙨𝙝𝙞𝙥'
+elseif tonumber(user_id) == tonumber(1954724531) then
+var = 'مبـرمـج السـورس'  
+elseif tonumber(user_id) == tonumber(1782576192) then
+var = 'مبـرمـج السياده'  
 elseif tonumber(user_id) == tonumber(119541395) then
 var = 'Dev Main'
 elseif tonumber(user_id) == tonumber(SUDO) then
